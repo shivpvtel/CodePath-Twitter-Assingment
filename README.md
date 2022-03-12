@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/shivpvtel/CodePath-Twitter-Assingment/blob/main/Kapture%202022-03-11%20at%2023.59.11.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />

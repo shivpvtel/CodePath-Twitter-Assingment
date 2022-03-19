@@ -23,12 +23,17 @@ class HomeTableViewController: UITableViewController {
         //making a pull down refresh options for users
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
-        
+     self.tableView.rowHeight = UITableView.automaticDimension
+       self.tableView.estimatedRowHeight = 200
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
     }
     
     //CAllS THE API
@@ -89,8 +94,7 @@ class HomeTableViewController: UITableViewController {
         UserDefaults.standard.set(false, forKey: "UserLoggedIn")
     }
     
-    
-    
+
     
     
     
@@ -105,10 +109,17 @@ class HomeTableViewController: UITableViewController {
         //the callers for getting the image
         let imageUrl = URL(string: (user["profile_image_url_https"] as? String)!)
         let data = try? Data(contentsOf: imageUrl!)
-        
+        cell.setFavorite(isFavorite: tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(isRetweeted: tweetArray[indexPath.row]["retweeted"] as! Bool)
+     
+       
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        
+       
+
         return cell
     }
     

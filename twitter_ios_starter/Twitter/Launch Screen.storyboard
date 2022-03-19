@@ -16,13 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-O4-ePe">
-                                <rect key="frame" x="78" y="317" width="235" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-O4-ePe">
+                                <rect key="frame" x="70" y="314" width="250" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="4E5-ur-Kpj"/>
+                                    <constraint firstAttribute="width" constant="235" id="gA7-co-Ahz"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tI5-O4-ePe" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="70" id="CoB-4l-xhh"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="tI5-O4-ePe" secondAttribute="trailing" constant="70" id="IlG-p5-LgG"/>
+                            <constraint firstItem="tI5-O4-ePe" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="270" id="TtY-3w-MPR"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="tI5-O4-ePe" secondAttribute="bottom" constant="280" id="n1C-v9-hLR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
